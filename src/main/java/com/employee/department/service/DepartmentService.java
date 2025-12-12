@@ -23,7 +23,7 @@ public class DepartmentService {
 
         Department saved = departmentRepo.save(d);
 
-        return MapperUtil.toDto(d);
+        return MapperUtil.toDto(saved);
     }
 
     public List<DepartmentDto> listAll() {
