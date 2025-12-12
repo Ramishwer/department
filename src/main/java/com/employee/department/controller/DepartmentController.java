@@ -21,7 +21,7 @@ public class DepartmentController {
     @PostMapping("/create")
     public ResponseEntity<DepartmentDto> create(@RequestBody CreateDepartmentDto dto) {
         DepartmentDto created = departmentService.create(dto);
-        return ResponseEntity.created(URI.create("/api/departments" + created.getId())).body(created);
+        return ResponseEntity.ok(created);
     }
 
     @GetMapping("/{id}")

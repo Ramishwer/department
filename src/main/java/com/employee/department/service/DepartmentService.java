@@ -41,6 +41,7 @@ public class DepartmentService {
     public void delete(Long id) {
         Department d= departmentRepo.findById(id)
                 .orElseThrow(()-> new ResourceNotFoundException("Department not found with id"+id));
+        departmentRepo.delete(d);
     }
 
     public Department getEntityById(Long id) {
